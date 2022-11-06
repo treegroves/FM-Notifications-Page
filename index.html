@@ -111,3 +111,19 @@
         <p><a href="#"></a> <span class="dot">&#x2022;</span><br></p>
       </div>
     </div> -->
+<script>  
+  const markRead = document.querySelector('.mark-read');
+  // const notificationCard = document.querySelectorAll('.notification-card')
+
+  markRead.addEventListener('click', () => {
+  const notificationCard = document.querySelectorAll('.notification-card');
+
+notificationCard.forEach((item) =>{
+
+item.style.backgroundColor = "blue"
+});
+  })
+
+</script>
+
+<!-- notificationCard.classList.replace('notification-card','notification-card-read'); -->
