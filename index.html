@@ -21,7 +21,7 @@
     <div class="top">
       <div class="notifications">
         <div class="notification-heading">Notifications</div>
-        <div class="notification-count">3</div>
+        <div class="notification-count"></div>
       </div>
       <div type="button" class="mark-read">Mark all as read</div>
     </div>
@@ -53,7 +53,7 @@
       </div>
     </div>
 
-    <div class="notification-card read">
+    <div class="notification-card">
       <div class="profile-thumb">
         <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin">
       </div>
@@ -65,7 +65,7 @@
       </div>
     </div>
 
-    <div class="notification-card read">
+    <div class="notification-card">
       <div class="profile-thumb">
         <img src="assets/images/avatar-anna-kim.webp" alt="Kimberly Smith">
       </div>
@@ -75,7 +75,7 @@
       </div>
     </div>
 
-    <div class="notification-card read">
+    <div class="notification-card">
       <div class="profile-thumb">
         <img src="assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson">
       </div>
@@ -84,7 +84,7 @@
       </div>
     </div>
 
-    <div class="notification-card read" >
+    <div class="notification-card" >
       <div class="profile-thumb">
         <img src="assets/images/avatar-anna-kim.webp" alt="Anna Kim">
       </div>
@@ -112,13 +112,34 @@
       </div>
     </div> -->
 <script>  
+ 
   const markRead = document.querySelector('.mark-read');
   const notificationCard = document.querySelectorAll('.notification-card');
+  // const individualCard = document.querySelector('.notification-card');
+  const allButtons = document.querySelectorAll('.notification-card');
+  // const count = document.querySelector('.notification-count').innerHTML = counter;
+ 
+console.log(allButtons)
+let counter = 7;
+for(i = 0; i < allButtons.length; i+=1) {
+  allButtons[i].addEventListener('click', function (e) {
+console.log("ind click")
+  e.currentTarget.style.backgroundColor= "white";
+if(counter > 0) {
+counter--;
+const number = document.querySelector('.notification-count').innerHTML = counter;
+}
+console.log(counter)
+});
+};
+
 
   markRead.addEventListener('click', () => {
     const count = document.querySelector('.notification-count').innerHTML = "0";
     notificationCard.forEach((item) =>{
     item.style.backgroundColor = "white"
+    counter--
+console.log(counter)
     });
   })
 
