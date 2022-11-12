@@ -23,6 +23,7 @@ for (let i = 0; i < allButtons.length; i += 1) {
 
 function read(e) {
   e.currentTarget.classList.add('read')
+  e.currentTarget.classList.remove('dot')
   if (count > 0) {
     document.querySelector('.notification-count').innerHTML = count -= 1
   }
