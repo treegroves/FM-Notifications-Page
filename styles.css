@@ -1,58 +1,97 @@
+
 body{
-  background-color: rgb(207, 219, 219);
+  background-color: hsl(210, 60%, 98%);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: hsl(219, 12%, 42%);
+  font-weight: 800;
+}
+
+a:hover{
+  color: hsl(219, 57%, 27%);
+}
+.name{
+  color: black;
+}
+.name:hover{
+  color: hsl(219, 57%, 27%);
 }
 .container{
-margin-left:auto;
-margin-right: auto;
-width: 50%;
-background-color: white;
-padding: 50px;
+  margin: 3% auto;
+  width: 50%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
 }
 
 .top{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 1vw;
 }
 
 .notifications{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 15px;
+  padding: 15px 15px 15px 0px;
+  font-size: 22px;
+  font-weight: 800;
 }
 
 .notification-count{
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-left: 3px;
-  background-color: blueviolet;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  background-color:hsl(219, 57%, 27%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 15%;
+}
+.dot{
+  color: red;
+  font-size: 16px;
+  font-weight: 800;
 }
 
 .mark-read{
-  padding: 15px;
+  padding: 16px;
+  font-weight: 500;
+  color: rgb(79, 83, 83);
 }
 .mark-read:hover{
   cursor: pointer;
-  color: rgb(79, 83, 83);
+  color: hsl(219, 57%, 27%);
 }
 
 .notification-card{
   display: flex;
   flex-direction: row;
-  background-color: rgb(164, 186, 186);
+  background-color: hsl(211, 68%, 94%);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  align-items: center;
 }
 
 .notification-card-read{
   background-color: azure;
 }
-
+.profile-thumb{
+  margin: 15px;
+}
+.profile-thumb img{
+height: 50px;
+}
 .notification-content{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
   padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .message{
@@ -67,5 +106,10 @@ padding: 50px;
 }
 
 .read{
-  background-color: white;
+  background-color: white; 
+
+}
+
+.dot-read{
+  display: none;
 }
