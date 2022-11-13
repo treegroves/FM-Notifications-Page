@@ -124,3 +124,26 @@ margin-left: auto;
   margin-top: 15px;
   margin-right: 15px;
 }
+
+/* .dark-mode-body{
+  background-color: #0b132b;
+}
+
+.dark-mode-container{
+  background-color:#1c2541;
+  color: white;
+}
+
+.dark-mode-notification{
+display: flex;
+  flex-direction: row;
+  background-color: hsl(211, 38%, 43%);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  align-items: flex-start;
+  color: black;
+} */
+
+.dark-mode-read{
+background-color: blue;
+}
