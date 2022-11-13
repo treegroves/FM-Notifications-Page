@@ -8,7 +8,6 @@ a{
   color: hsl(219, 12%, 42%);
   font-weight: 800;
 }
-
 a:hover{
   color: hsl(219, 57%, 27%);
 }
@@ -26,13 +25,20 @@ a:hover{
   border-radius: 15px;
 }
 
+@media only screen and (max-width: 900px){
+  .container{
+    width: 90%;
+  }
+  body{
+    background-color: white;
+  }
+}
 .top{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 1vw;
 }
-
 .notifications{
   display: flex;
   flex-direction: row;
@@ -41,7 +47,6 @@ a:hover{
   font-size: 22px;
   font-weight: 800;
 }
-
 .notification-count{
   padding-left: 10px;
   padding-right: 10px;
@@ -55,7 +60,9 @@ a:hover{
   font-size: 16px;
   font-weight: 800;
 }
-
+.hide-dot{
+  visibility: hidden
+}
 .mark-read{
   padding: 16px;
   font-weight: 500;
@@ -65,16 +72,14 @@ a:hover{
   cursor: pointer;
   color: hsl(219, 57%, 27%);
 }
-
 .notification-card{
   display: flex;
   flex-direction: row;
   background-color: hsl(211, 68%, 94%);
   border-radius: 10px;
   margin-bottom: 10px;
-  align-items: center;
+  align-items: flex-start;
 }
-
 .notification-card-read{
   background-color: azure;
 }
@@ -86,30 +91,45 @@ height: 50px;
 }
 .notification-content{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  width: 100%;
   padding: 10px;
   font-size: 16px;
   font-weight: 500;
+  width: 100%;
+}
+.notification-content p {
+  margin: 0;
+}
+.post-image img{
+  height: 50px;
+padding: 10px 20px 10px 0px;
 }
 
 .message{
-  background-color: rgb(189, 185, 185);
   padding: 15px;
   border-radius: 5px;
+  margin-top: 10px !important;
+  border: rgb(212, 212, 212) solid 1px;
+  background-color: white;
 }
-
-#rh{
+.message:hover{
+  background-color: hsl(211, 68%, 94%);
+  cursor: pointer;
+}
+/* #rh{
    display: flex;
   flex-direction: column !important;
-}
-
+} */
 .read{
   background-color: white; 
-
 }
-
-.dot-read{
-  display: none;
+.unread::after{
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  margin-top: 15px;
+  margin-right: 2vw;
 }
