@@ -27,7 +27,8 @@ a:hover{
 
 @media only screen and (max-width: 900px){
   .container{
-    width: 90%;
+    width: 100%;
+    padding: 0px;
   }
   body{
     background-color: white;
@@ -54,14 +55,6 @@ a:hover{
   background-color:hsl(219, 57%, 27%);
   color: hsl(0, 0%, 100%);
   border-radius: 15%;
-}
-.dot{
-  color: red;
-  font-size: 16px;
-  font-weight: 800;
-}
-.hide-dot{
-  visibility: hidden
 }
 .mark-read{
   padding: 16px;
@@ -96,14 +89,17 @@ height: 50px;
   padding: 10px;
   font-size: 16px;
   font-weight: 500;
-  width: 100%;
 }
 .notification-content p {
   margin: 0;
 }
+
+.post-image{
+margin-left: auto;
+}
 .post-image img{
   height: 50px;
-padding: 10px 20px 10px 0px;
+  padding: 10px 10px 10px 0px;
 }
 
 .message{
@@ -117,19 +113,14 @@ padding: 10px 20px 10px 0px;
   background-color: hsl(211, 68%, 94%);
   cursor: pointer;
 }
-/* #rh{
-   display: flex;
-  flex-direction: column !important;
-} */
 .read{
   background-color: white; 
 }
 .unread::after{
   content: '';
-  width: 10px;
-  height: 10px;
+  padding: 5px;
   background-color: red;
   border-radius: 50%;
   margin-top: 15px;
-  margin-right: 2vw;
+  margin-right: 15px;
 }
